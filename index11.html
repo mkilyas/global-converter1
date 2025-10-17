@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Converters — Global Converter</title>
+  <meta name="description" content="Convert files instantly and explore global data in one platform."/>
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Global Converter & World Data Portal" />
+  <meta property="og:description" content="Convert files instantly and explore global data in one platform." />
+  <meta property="og:image" content="assets/img/preview-1200x630.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="splash-card">
+      <h1>Global Converter</h1>
+      <p>All-in-One Converter & Data Portal</p>
+      <div class="loader">Loading…</div>
+    </div>
+  </div>
+
+  <div id="app" style="display:none;">
+    <header class="site-header">
+      <div class="container">
+        <img src="" alt="logo placeholder" id="logoPlaceholder" style="height:34px;vertical-align:middle"/>
+        <h1 class="brand" style="display:inline-block;margin-left:10px">Global Converter</h1>
+        <nav class="top-nav">
+          <a href="index.html">Home</a>
+          <a href="index11.html">Converters</a>
+          <a href="index12.html">World Data</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>Converters — Global Converter</h2>
+        <p>Convert PDF, Word, Excel, Images — and explore world data.</p>
+        <div class="cta-row">
+          <a class="btn" href="index11.html">Try Converters</a>
+          <a class="btn ghost" href="index12.html">View World Data Cards</a>
+        </div>
+        <div class="currency-row">
+          <label>Detected currency: <strong id="detectedCurrency">USD</strong></label>
+          <select id="currencyToggle">
+            <option value="USD">USD</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="card">
+          <h3>Free 3-file conversions</h3>
+          <p>Users can convert up to <strong>3 files for free</strong>. After that, pricing applies.</p>
+        </div>
+        <div class="card">
+          <h3>6-month 18% discount</h3>
+          <p>Apply the 6-month promo for an <strong>18% discount</strong> at checkout (demo toggle available).</p>
+        </div>
+        <div class="card">
+          <h3>Currency auto-detect</h3>
+          <p>Default currency is <strong>USD</strong>. Visitors see their local currency automatically.</p>
+        </div>
+      </section>
+
+      <section class="pricing-preview">
+        <h3>Pricing Preview</h3>
+        <p>Base price: <span id="priceDisplay">USD 5.00</span> / conversion</p>
+        <button id="openPricing" class="btn">Open Pricing Window</button>
+      </section>
+
+      <section class="ads-placeholder">
+        <p>Google AdSense placeholder – replace with your AdSense code in production.</p>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Contact: <a href="mailto:infoglobalconverter@kashif.shop">infoglobalconverter@kashif.shop</a></p>
+        <p>&copy; Global Converter — Demo build</p>
+      </div>
+    </footer>
+
+    <div id="pricingModal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="closePricing">&times;</button>
+        <h2>Pricing</h2>
+        <p>Base price per file: <span id="modalPrice">USD 5.00</span></p>
+        <label><input type="checkbox" id="applyDiscount"> Apply 6-month 18% discount</label>
+        <p>Files to convert: <input id="fileCount" type="number" value="1" min="1" max="20"></p>
+        <p>Free conversions left: <span id="freeLeft">3</span></p>
+        <p>Total: <strong id="totalPrice">USD 5.00</strong></p>
+        <button id="checkoutBtn" class="btn">Checkout (demo)</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main_live.js"></script>
+</body>
+</html>
